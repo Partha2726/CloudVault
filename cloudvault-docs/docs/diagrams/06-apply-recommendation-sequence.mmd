@@ -1,0 +1,19 @@
+sequenceDiagram
+  autonumber
+  participant FE as React
+  participant API as FastAPI
+  participant DB as PostgreSQL
+  participant S3 as Amazon S3
+  FE->>API: POST /api/recommendations/{id}/apply
+  API->>DB: BEGIN, lock documents row (FOR UPDATE)
+  API->>API: re-run engine on current data
+  alt result differs from stored recommendation
+    API->>DB: mark recommendation STALE, COMMIT
+    API-->>FE: 409 STALE_RECOMMENDATION
+  else same
+    API->>S3: CopyObject onto same key with new StorageClass (old VersionId as source)
+    S3-->>API: new VersionId
+    API->>DB: update version row (s3_version_id, storage_class, storage_class_changed_at), recommendation APPLIED, COMMIT
+    API->>S3: DeleteObject with OLD VersionId (best effort)
+    API-->>FE: 200
+  end

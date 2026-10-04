@@ -1,0 +1,19 @@
+flowchart TD
+  P0[P0 Scope freeze] --> P1[P1 Scaffolding]
+  P1 --> P2[P2 Database]
+  P1 --> P3[P3 S3 integration]
+  P2 --> P4[P4 Core backend]
+  P3 --> P4
+  P4 --> P5[P5 Frontend core]
+  P5 --> P6[P6 Versioning]
+  P5 --> P7[P7 Access logging UI]
+  P6 --> P8[P8 Optimization]
+  P7 --> P8
+  P4 --> P9[P9 Lambda]
+  P3 --> P9
+  P8 --> P10[P10 Security]
+  P9 --> P10
+  P10 --> P11[P11 Testing]
+  P11 --> P12[P12 Deployment]
+  P12 --> P13[P13 Docs]
+  P13 --> P14[P14 Demo]

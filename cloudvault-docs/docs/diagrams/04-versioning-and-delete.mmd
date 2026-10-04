@@ -1,0 +1,23 @@
+flowchart TB
+  subgraph A["1. Upload v1 then v2 (same key)"]
+    A1["key K: version V2 (current)"]
+    A2["key K: version V1 (noncurrent)"]
+  end
+  subgraph B["2. Soft delete = DELETE without VersionId"]
+    B0["key K: DELETE MARKER M1 (current)"]
+    B1["key K: V2 (noncurrent, data intact)"]
+    B2["key K: V1 (noncurrent, data intact)"]
+  end
+  subgraph C["3. Undelete = delete the marker by its VersionId"]
+    C1["key K: V2 (current again)"]
+    C2["key K: V1"]
+  end
+  subgraph D["4. Restore v1 = CopyObject from V1 onto K"]
+    D0["key K: V3 (current, content of V1)"]
+    D1["key K: V2"]
+    D2["key K: V1"]
+  end
+  subgraph E["5. Permanent delete = delete EVERY version and marker by VersionId"]
+    E1["nothing remains for key K"]
+  end
+  A --> B --> C --> D --> E

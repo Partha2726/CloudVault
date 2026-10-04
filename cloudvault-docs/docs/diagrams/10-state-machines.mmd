@@ -1,0 +1,22 @@
+stateDiagram-v2
+  direction LR
+  state "Document status" as D {
+    [*] --> ACTIVE
+    ACTIVE --> DELETED: soft delete (marker created)
+    DELETED --> ACTIVE: undelete (marker removed)
+    DELETED --> [*]: permanent delete
+  }
+  state "Processing job" as J {
+    [*] --> PENDING
+    PENDING --> SUCCEEDED
+    PENDING --> FAILED
+    PENDING --> SKIPPED
+    FAILED --> PENDING: retry
+    PENDING --> PENDING: stalled over 10 min then retry
+  }
+  state "Recommendation" as R {
+    [*] --> OPEN
+    OPEN --> APPLIED
+    OPEN --> DISMISSED
+    OPEN --> STALE: refresh or engine result changed
+  }

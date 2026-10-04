@@ -1,0 +1,16 @@
+flowchart TD
+  S([Start: current version of ACTIVE document]) --> C0{class in STANDARD, STANDARD_IA, GLACIER_IR?}
+  C0 -- no --> K0[KEEP: UNSUPPORTED_CLASS]
+  C0 -- yes --> C1{size under MIN_SIZE?}
+  C1 -- yes --> K1[KEEP: SMALL_OBJECT]
+  C1 -- no --> C2{age_days under MIN_AGE_IA?}
+  C2 -- yes --> K2[KEEP: TOO_NEW]
+  C2 -- no --> C3{days_in_class under COOLDOWN?}
+  C3 -- yes --> K3[KEEP: COOLDOWN]
+  C3 -- no --> R1{class is IA or GIR and a30 >= PROMOTE_ACCESSES_30D?}
+  R1 -- yes --> O1[RECOMMEND STANDARD: R1_PROMOTE]
+  R1 -- no --> R2{class is STANDARD or IA and age >= GIR_MIN_AGE and a90 == 0?}
+  R2 -- yes --> O2[RECOMMEND GLACIER_IR: R2_TO_GIR]
+  R2 -- no --> R3{class is STANDARD and a90 <= IA_MAX_ACCESSES_90D and idle >= IA_MIN_IDLE?}
+  R3 -- yes --> O3[RECOMMEND STANDARD_IA: R3_TO_IA]
+  R3 -- no --> K4[KEEP: ACTIVE_USE]

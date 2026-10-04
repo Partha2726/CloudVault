@@ -1,0 +1,17 @@
+flowchart LR
+  subgraph Untrusted
+    B[Browser]
+  end
+  subgraph Server["Backend on Render (holds IAM user keys in env vars)"]
+    API[FastAPI]
+  end
+  subgraph AWS
+    S3[(Private S3 bucket)]
+    LM[Lambda with execution role]
+  end
+  B -- "JWT only, never AWS keys" --> API
+  API -- "scoped IAM user policy" --> S3
+  API -- "presigned GET URL, 120 s, VersionId-bound" --> B
+  B -- "plain GET with signature in URL" --> S3
+  S3 -- "event" --> LM
+  LM -- "X-Internal-Token over HTTPS" --> API

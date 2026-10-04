@@ -1,0 +1,21 @@
+flowchart TB
+  subgraph Vercel
+    FE[Static React build]
+  end
+  subgraph Render
+    API[FastAPI web service]
+  end
+  subgraph Neon
+    PG[(PostgreSQL)]
+  end
+  subgraph AWS["AWS ap-south-1"]
+    S3[(S3 bucket versioned private)]
+    LM[Lambda cloudvault-processor]
+    CW[CloudWatch Logs 7 day retention]
+  end
+  FE --> API
+  API --> PG
+  API --> S3
+  S3 --> LM
+  LM --> API
+  LM --> CW

@@ -1,0 +1,24 @@
+sequenceDiagram
+  autonumber
+  participant S3 as Amazon S3
+  participant L as Lambda
+  participant API as FastAPI
+  participant DB as PostgreSQL
+  S3-)L: ObjectCreated:Put event
+  L->>L: decode key (unquote_plus), parse document_id, read size and versionId
+  alt size over 5 MB
+    L->>API: callback status=SKIPPED, error_code=TOO_LARGE
+  else within limit
+    L->>S3: GetObject (VersionId)
+    L->>L: extract text and counts (pdf, txt, md, csv, docx)
+    L->>API: callback status=SUCCEEDED + counts + excerpt
+  end
+  API->>DB: find job by (document_id, s3_version_id)
+  alt not found yet (upload not committed)
+    API-->>L: 409 -> Lambda raises -> automatic retry
+  else job not PENDING
+    API-->>L: 200 already_processed (idempotent no-op)
+  else job PENDING
+    API->>DB: update job, finished_at
+    API-->>L: 200
+  end

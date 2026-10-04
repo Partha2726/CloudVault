@@ -1,0 +1,11 @@
+flowchart LR
+  U[User Browser] --> FE[React SPA]
+  FE -->|HTTPS + JWT| API[FastAPI Backend]
+  API --> DB[(PostgreSQL)]
+  API -->|Put, Copy, Delete, ListVersions, Head| S3[(Amazon S3 private versioned bucket)]
+  API -->|presigned GET URL| FE
+  FE -->|GET via presigned URL| S3
+  S3 -->|ObjectCreated:Put event| L[AWS Lambda]
+  L -->|GetObject size-limited| S3
+  L -->|HTTPS + shared secret| API
+  API -->|lambda:InvokeFunction for retry| L

@@ -1,0 +1,31 @@
+sequenceDiagram
+  autonumber
+  actor U as User
+  participant FE as React
+  participant API as FastAPI
+  participant DB as PostgreSQL
+  participant S3 as Amazon S3
+  participant L as Lambda
+  U->>FE: choose file
+  FE->>API: POST /api/documents (multipart, JWT)
+  API->>API: validate name, size, type, magic bytes, SHA-256
+  API->>DB: BEGIN, insert document + version 1, flush (unique index checked)
+  alt name already active
+    DB-->>API: unique violation
+    API-->>FE: 409 NAME_EXISTS
+  else free
+    API->>S3: PutObject (metadata, tags, ChecksumSHA256)
+    alt S3 fails
+      S3-->>API: error
+      API->>DB: ROLLBACK
+      API-->>FE: 502 STORAGE_ERROR
+    else S3 ok
+      S3-->>API: VersionId
+      API->>DB: set s3_version_id, insert processing_job PENDING, COMMIT
+      API-->>FE: 201 document
+      S3-)L: ObjectCreated:Put (async, at-least-once)
+      L->>S3: GetObject (if size <= 5 MB)
+      L->>API: POST /api/internal/processing-results
+      API->>DB: job PENDING -> SUCCEEDED / FAILED / SKIPPED
+    end
+  end

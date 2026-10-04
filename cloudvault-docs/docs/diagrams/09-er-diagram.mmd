@@ -1,0 +1,68 @@
+erDiagram
+  users ||--o{ documents : owns
+  documents ||--o{ document_versions : has
+  documents ||--o| document_versions : current_version
+  document_versions ||--o{ access_logs : accessed
+  users ||--o{ access_logs : performed
+  document_versions ||--|| processing_jobs : processed_by
+  document_versions ||--o{ storage_recommendations : evaluated_for
+  users {
+    uuid id PK
+    varchar email
+    varchar password_hash
+    timestamptz created_at
+  }
+  documents {
+    uuid id PK
+    uuid owner_id FK
+    varchar display_name
+    varchar s3_key UK
+    varchar status
+    uuid current_version_id FK
+    varchar delete_marker_version_id
+    timestamptz deleted_at
+  }
+  document_versions {
+    uuid id PK
+    uuid document_id FK
+    int version_number
+    varchar s3_version_id
+    bigint size_bytes
+    varchar content_type
+    char sha256
+    varchar storage_class
+    timestamptz storage_class_changed_at
+    varchar origin
+    int restored_from_version
+    varchar state
+    timestamptz created_at
+  }
+  access_logs {
+    bigint id PK
+    uuid document_id FK
+    uuid version_id FK
+    uuid user_id FK
+    varchar event_type
+    timestamptz accessed_at
+  }
+  processing_jobs {
+    uuid id PK
+    uuid version_id FK
+    uuid document_id FK
+    varchar status
+    int attempts
+    varchar error_code
+    int page_count
+    int word_count
+    text text_excerpt
+  }
+  storage_recommendations {
+    uuid id PK
+    uuid version_id FK
+    varchar current_class
+    varchar recommended_class
+    varchar rule_id
+    text reason
+    jsonb signals
+    varchar status
+  }
