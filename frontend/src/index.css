@@ -1,0 +1,106 @@
+@import "tailwindcss";
+
+/* CloudVault "Finding Aid" world: slate archive shell, cool box-board ground, white record
+   panels with hairline rules, institutional record type. */
+@theme {
+  --font-sans: "Public Sans Variable", "Public Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-mono: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+
+  /* Shell and ink */
+  --color-shell: #2e3a40;
+  --color-shell-raised: #3a474e;
+  --color-shell-ink: #f4f6f5;
+  --color-shell-muted: #b8c4c9;
+  --color-ink: #1d2427;
+  --color-ink-muted: #56636a;
+  --color-ink-faint: #5f6c73; /* 5.4:1 on panels, 4.7:1 on ground */
+
+  /* Ground, panels, rules */
+  --color-ground: #eef0ee;
+  --color-panel: #ffffff;
+  --color-rule: #d6dbd8;
+  --color-rule-strong: #b9c1bd;
+
+  /* Data: storage classes on one shared scale */
+  --color-class-standard: #2e3a40;
+  --color-class-ia: #5e7480;
+  --color-class-gir: #9fb3bc;
+
+  /* States */
+  --color-accent: #5e7480;
+  --color-accent-strong: #44565f;
+  --color-ok: #3f6e4f;
+  --color-alert: #b23a2f;
+  --color-alert-soft: #f6e4e1;
+
+  --radius-record: 2px;
+}
+
+@layer base {
+  html {
+    color-scheme: light;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body {
+    @apply bg-ground font-sans text-ink antialiased;
+    font-feature-settings: "kern" 1;
+  }
+
+  /* Figures line up wherever numbers appear. */
+  .tabular,
+  table,
+  [data-figure] {
+    font-variant-numeric: tabular-nums lining-nums;
+  }
+
+  ::selection {
+    background: color-mix(in oklab, var(--color-accent) 28%, white);
+    color: var(--color-ink);
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-accent-strong);
+    outline-offset: 2px;
+    border-radius: var(--radius-record);
+  }
+
+  a {
+    text-underline-offset: 3px;
+  }
+
+  input,
+  textarea {
+    caret-color: var(--color-accent-strong);
+  }
+
+  * {
+    scrollbar-color: var(--color-rule-strong) transparent;
+    scrollbar-width: thin;
+  }
+}
+
+/* Record caption: the uppercase, tracked label of an archival record field. */
+@utility caption {
+  font-size: 0.75rem;
+  line-height: 1rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-ink-muted);
+}
+
+@utility record {
+  background: var(--color-panel);
+  border: 1px solid var(--color-rule);
+  border-radius: var(--radius-record);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}

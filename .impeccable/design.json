@@ -1,0 +1,472 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-10-05T18:18:35+00:00",
+  "title": "Design System: CloudVault",
+  "extensions": {
+    "colorMeta": {
+      "shell": {
+        "role": "primary",
+        "displayName": "Archive Slate",
+        "canonical": "#2e3a40",
+        "tonalRamp": [
+          "oklch(15% 0.019 230)",
+          "oklch(26% 0.019 230)",
+          "oklch(38% 0.019 230)",
+          "oklch(49% 0.019 230)",
+          "oklch(61% 0.019 230)",
+          "oklch(72% 0.019 230)",
+          "oklch(84% 0.019 230)",
+          "oklch(95% 0.019 230)"
+        ]
+      },
+      "shell-raised": {
+        "role": "primary",
+        "displayName": "Raised Slate",
+        "canonical": "#3a474e",
+        "tonalRamp": [
+          "oklch(15% 0.021 232)",
+          "oklch(26% 0.021 232)",
+          "oklch(38% 0.021 232)",
+          "oklch(49% 0.021 232)",
+          "oklch(61% 0.021 232)",
+          "oklch(72% 0.021 232)",
+          "oklch(84% 0.021 232)",
+          "oklch(95% 0.021 232)"
+        ]
+      },
+      "shell-ink": {
+        "role": "neutral",
+        "displayName": "Shell Ink",
+        "canonical": "#f4f6f5",
+        "tonalRamp": [
+          "oklch(15% 0.002 165)",
+          "oklch(26% 0.002 165)",
+          "oklch(38% 0.002 165)",
+          "oklch(49% 0.002 165)",
+          "oklch(61% 0.002 165)",
+          "oklch(72% 0.002 165)",
+          "oklch(84% 0.002 165)",
+          "oklch(95% 0.002 165)"
+        ]
+      },
+      "shell-muted": {
+        "role": "neutral",
+        "displayName": "Shell Muted",
+        "canonical": "#b8c4c9",
+        "tonalRamp": [
+          "oklch(15% 0.015 225)",
+          "oklch(26% 0.015 225)",
+          "oklch(38% 0.015 225)",
+          "oklch(49% 0.015 225)",
+          "oklch(61% 0.015 225)",
+          "oklch(72% 0.015 225)",
+          "oklch(84% 0.015 225)",
+          "oklch(95% 0.015 225)"
+        ]
+      },
+      "ink": {
+        "role": "neutral",
+        "displayName": "Record Ink",
+        "canonical": "#1d2427",
+        "tonalRamp": [
+          "oklch(15% 0.012 226)",
+          "oklch(26% 0.012 226)",
+          "oklch(38% 0.012 226)",
+          "oklch(49% 0.012 226)",
+          "oklch(61% 0.012 226)",
+          "oklch(72% 0.012 226)",
+          "oklch(84% 0.012 226)",
+          "oklch(95% 0.012 226)"
+        ]
+      },
+      "ink-muted": {
+        "role": "neutral",
+        "displayName": "Muted Ink",
+        "canonical": "#56636a",
+        "tonalRamp": [
+          "oklch(15% 0.020 231)",
+          "oklch(26% 0.020 231)",
+          "oklch(38% 0.020 231)",
+          "oklch(49% 0.020 231)",
+          "oklch(61% 0.020 231)",
+          "oklch(72% 0.020 231)",
+          "oklch(84% 0.020 231)",
+          "oklch(95% 0.020 231)"
+        ]
+      },
+      "ink-faint": {
+        "role": "neutral",
+        "displayName": "Faint Ink",
+        "canonical": "#5f6c73",
+        "tonalRamp": [
+          "oklch(15% 0.019 231)",
+          "oklch(26% 0.019 231)",
+          "oklch(38% 0.019 231)",
+          "oklch(49% 0.019 231)",
+          "oklch(61% 0.019 231)",
+          "oklch(72% 0.019 231)",
+          "oklch(84% 0.019 231)",
+          "oklch(95% 0.019 231)"
+        ]
+      },
+      "ground": {
+        "role": "neutral",
+        "displayName": "Box-board Ground",
+        "canonical": "#eef0ee",
+        "tonalRamp": [
+          "oklch(15% 0.003 146)",
+          "oklch(26% 0.003 146)",
+          "oklch(38% 0.003 146)",
+          "oklch(49% 0.003 146)",
+          "oklch(61% 0.003 146)",
+          "oklch(72% 0.003 146)",
+          "oklch(84% 0.003 146)",
+          "oklch(95% 0.003 146)"
+        ]
+      },
+      "panel": {
+        "role": "neutral",
+        "displayName": "Record White",
+        "canonical": "#ffffff",
+        "tonalRamp": [
+          "oklch(15% 0.000 90)",
+          "oklch(26% 0.000 90)",
+          "oklch(38% 0.000 90)",
+          "oklch(49% 0.000 90)",
+          "oklch(61% 0.000 90)",
+          "oklch(72% 0.000 90)",
+          "oklch(84% 0.000 90)",
+          "oklch(95% 0.000 90)"
+        ]
+      },
+      "rule": {
+        "role": "neutral",
+        "displayName": "Hairline",
+        "canonical": "#d6dbd8",
+        "tonalRamp": [
+          "oklch(15% 0.007 160)",
+          "oklch(26% 0.007 160)",
+          "oklch(38% 0.007 160)",
+          "oklch(49% 0.007 160)",
+          "oklch(61% 0.007 160)",
+          "oklch(72% 0.007 160)",
+          "oklch(84% 0.007 160)",
+          "oklch(95% 0.007 160)"
+        ]
+      },
+      "rule-strong": {
+        "role": "neutral",
+        "displayName": "Strong Hairline",
+        "canonical": "#b9c1bd",
+        "tonalRamp": [
+          "oklch(15% 0.010 165)",
+          "oklch(26% 0.010 165)",
+          "oklch(38% 0.010 165)",
+          "oklch(49% 0.010 165)",
+          "oklch(61% 0.010 165)",
+          "oklch(72% 0.010 165)",
+          "oklch(84% 0.010 165)",
+          "oklch(95% 0.010 165)"
+        ]
+      },
+      "class-standard": {
+        "role": "data",
+        "displayName": "Class Standard",
+        "canonical": "#2e3a40",
+        "tonalRamp": [
+          "oklch(15% 0.019 230)",
+          "oklch(26% 0.019 230)",
+          "oklch(38% 0.019 230)",
+          "oklch(49% 0.019 230)",
+          "oklch(61% 0.019 230)",
+          "oklch(72% 0.019 230)",
+          "oklch(84% 0.019 230)",
+          "oklch(95% 0.019 230)"
+        ]
+      },
+      "class-ia": {
+        "role": "data",
+        "displayName": "Class IA",
+        "canonical": "#5e7480",
+        "tonalRamp": [
+          "oklch(15% 0.032 232)",
+          "oklch(26% 0.032 232)",
+          "oklch(38% 0.032 232)",
+          "oklch(49% 0.032 232)",
+          "oklch(61% 0.032 232)",
+          "oklch(72% 0.032 232)",
+          "oklch(84% 0.032 232)",
+          "oklch(95% 0.032 232)"
+        ]
+      },
+      "class-gir": {
+        "role": "data",
+        "displayName": "Pale Stack Grey",
+        "canonical": "#9fb3bc",
+        "tonalRamp": [
+          "oklch(15% 0.026 227)",
+          "oklch(26% 0.026 227)",
+          "oklch(38% 0.026 227)",
+          "oklch(49% 0.026 227)",
+          "oklch(61% 0.026 227)",
+          "oklch(72% 0.026 227)",
+          "oklch(84% 0.026 227)",
+          "oklch(95% 0.026 227)"
+        ]
+      },
+      "accent": {
+        "role": "secondary",
+        "displayName": "Box-board Blue-Grey",
+        "canonical": "#5e7480",
+        "tonalRamp": [
+          "oklch(15% 0.032 232)",
+          "oklch(26% 0.032 232)",
+          "oklch(38% 0.032 232)",
+          "oklch(49% 0.032 232)",
+          "oklch(61% 0.032 232)",
+          "oklch(72% 0.032 232)",
+          "oklch(84% 0.032 232)",
+          "oklch(95% 0.032 232)"
+        ]
+      },
+      "accent-strong": {
+        "role": "secondary",
+        "displayName": "Deep Box-board",
+        "canonical": "#44565f",
+        "tonalRamp": [
+          "oklch(15% 0.027 230)",
+          "oklch(26% 0.027 230)",
+          "oklch(38% 0.027 230)",
+          "oklch(49% 0.027 230)",
+          "oklch(61% 0.027 230)",
+          "oklch(72% 0.027 230)",
+          "oklch(84% 0.027 230)",
+          "oklch(95% 0.027 230)"
+        ]
+      },
+      "ok": {
+        "role": "tertiary",
+        "displayName": "Archival Green",
+        "canonical": "#3f6e4f",
+        "tonalRamp": [
+          "oklch(15% 0.072 154)",
+          "oklch(26% 0.072 154)",
+          "oklch(38% 0.072 154)",
+          "oklch(49% 0.072 154)",
+          "oklch(61% 0.072 154)",
+          "oklch(72% 0.072 154)",
+          "oklch(84% 0.072 154)",
+          "oklch(95% 0.072 154)"
+        ]
+      },
+      "alert": {
+        "role": "tertiary",
+        "displayName": "Archival Red",
+        "canonical": "#b23a2f",
+        "tonalRamp": [
+          "oklch(15% 0.158 29)",
+          "oklch(26% 0.158 29)",
+          "oklch(38% 0.158 29)",
+          "oklch(49% 0.158 29)",
+          "oklch(61% 0.158 29)",
+          "oklch(72% 0.158 29)",
+          "oklch(84% 0.158 29)",
+          "oklch(95% 0.158 29)"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Display",
+        "purpose": "Page h1, one per screen, above the figures."
+      },
+      "figure": {
+        "displayName": "Figure",
+        "purpose": "Summary-strip values and headline counts; tabular lining."
+      },
+      "headline": {
+        "displayName": "Headline",
+        "purpose": "h1 of a standalone card such as login."
+      },
+      "title": {
+        "displayName": "Title",
+        "purpose": "Record-panel titles and empty-state titles."
+      },
+      "lead": {
+        "displayName": "Lead",
+        "purpose": "One-line subtitle under the page h1."
+      },
+      "body": {
+        "displayName": "Body",
+        "purpose": "Rows, list items, buttons, form text."
+      },
+      "note": {
+        "displayName": "Note",
+        "purpose": "Faint descriptive line under figures and class names; disclaimers."
+      },
+      "caption": {
+        "displayName": "Caption",
+        "purpose": "Uppercase tracked field label and panel-header aside."
+      }
+    },
+    "shadows": [],
+    "focus": [
+      {
+        "name": "focus-outline",
+        "value": "outline: 2px solid var(--color-accent-strong); outline-offset: 2px",
+        "purpose": "Default keyboard focus on all controls."
+      },
+      {
+        "name": "input-focus",
+        "value": "border-color: var(--color-accent-strong); box-shadow: 0 0 0 2px color-mix(in oklab, var(--color-accent) 25%, transparent)",
+        "purpose": "Text-field focus ring (Tailwind ring-2 ring-accent/25); a focus ring, not elevation."
+      }
+    ],
+    "motion": [
+      {
+        "name": "color-transition",
+        "value": "color 150ms",
+        "purpose": "Nav link and button color changes only; no movement."
+      },
+      {
+        "name": "reduced-motion",
+        "value": "animation/transition-duration 0.01ms under prefers-reduced-motion",
+        "purpose": "Global; skeletons are static, spinners only on busy buttons."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "sm",
+        "value": "640px"
+      },
+      {
+        "name": "md",
+        "value": "768px"
+      },
+      {
+        "name": "lg",
+        "value": "1024px"
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "Slate submit action, e.g. Log in.",
+      "html": "<button class=\"ds-btn-primary\">Log in</button>",
+      "css": ".ds-btn-primary { font-family: var(--font-sans); background: var(--color-shell); color: var(--color-shell-ink); padding: 10px 12px; font-size: 14px; font-weight: 600; border: none; border-radius: var(--radius-record); cursor: pointer; } .ds-btn-primary:hover { background: var(--color-shell-raised); } .ds-btn-primary:focus-visible { outline: 2px solid var(--color-accent-strong); outline-offset: 2px; } .ds-btn-primary:disabled { opacity: .6; }"
+    },
+    {
+      "name": "Secondary Button",
+      "kind": "button",
+      "refersTo": "button-secondary",
+      "description": "Bordered white action, e.g. Retry in the error state.",
+      "html": "<button class=\"ds-btn-secondary\"><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M21 12a9 9 0 1 1-9-9c2.52 0 4.93 1 6.74 2.74L21 8\"/><path d=\"M21 3v5h-5\"/></svg>Retry</button>",
+      "css": ".ds-btn-secondary { font-family: var(--font-sans); display: inline-flex; align-items: center; gap: 8px; background: var(--color-panel); color: var(--color-ink); border: 1px solid var(--color-rule-strong); border-radius: var(--radius-record); padding: 6px 12px; font-size: 14px; font-weight: 500; cursor: pointer; } .ds-btn-secondary:hover { border-color: var(--color-accent); background: var(--color-ground); } .ds-btn-secondary:focus-visible { outline: 2px solid var(--color-accent-strong); outline-offset: 2px; }"
+    },
+    {
+      "name": "Text Field",
+      "kind": "input",
+      "refersTo": "input-text",
+      "description": "Caption-labelled field on a record panel.",
+      "html": "<label class=\"ds-field\"><span class=\"ds-caption\">Email</span><input class=\"ds-input\" type=\"email\" placeholder=\"you@example.com\"></label>",
+      "css": ".ds-field { font-family: var(--font-sans); display: block; font-size: 14px; } .ds-caption { display: block; margin-bottom: 6px; font-size: 12px; line-height: 16px; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; color: var(--color-ink-muted); } .ds-input { font-family: var(--font-sans); width: 100%; box-sizing: border-box; background: var(--color-panel); color: var(--color-ink); border: 1px solid var(--color-rule-strong); border-radius: var(--radius-record); padding: 8px 12px; font-size: 14px; outline: none; caret-color: var(--color-accent-strong); } .ds-input:focus { border-color: var(--color-accent-strong); box-shadow: 0 0 0 2px color-mix(in oklab, var(--color-accent) 25%, transparent); }"
+    },
+    {
+      "name": "Shell Navigation",
+      "kind": "nav",
+      "refersTo": "nav-shell",
+      "description": "56px slate header with wordmark, simulated-store tag and underlined active link.",
+      "html": "<header class=\"ds-shell\"><span class=\"ds-brand\"><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"20\" height=\"20\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.75\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><rect width=\"20\" height=\"5\" x=\"2\" y=\"3\" rx=\"1\"/><path d=\"M4 8v11a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8\"/><path d=\"M10 12h4\"/></svg><b>CloudVault</b><span class=\"ds-tag\">Simulated S3</span></span><nav class=\"ds-nav\"><a class=\"ds-nav-link is-active\" href=\"#\">Dashboard</a><a class=\"ds-nav-link\" href=\"#\">Documents</a></nav></header>",
+      "css": ".ds-shell { font-family: var(--font-sans); display: flex; align-items: stretch; gap: 32px; height: 56px; padding: 0 24px; background: var(--color-shell); color: var(--color-shell-ink); } .ds-brand { display: flex; align-items: center; gap: 10px; font-size: 15px; letter-spacing: -.025em; } .ds-brand svg { color: var(--color-shell-muted); } .ds-tag { border: 1px solid var(--color-shell-raised); border-radius: var(--radius-record); padding: 2px 6px; font-size: 12px; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; color: var(--color-shell-muted); } .ds-nav { display: flex; } .ds-nav-link { display: flex; align-items: center; padding: 0 12px; font-size: 14px; font-weight: 500; color: var(--color-shell-muted); text-decoration: none; border-bottom: 2px solid transparent; transition: color .15s; } .ds-nav-link:hover { color: var(--color-shell-ink); } .ds-nav-link.is-active { color: var(--color-shell-ink); border-bottom-color: var(--color-shell-ink); } .ds-nav-link:focus-visible { outline: 2px solid var(--color-shell-ink); outline-offset: -2px; }"
+    },
+    {
+      "name": "Summary Strip",
+      "kind": "card",
+      "refersTo": "record-panel",
+      "description": "One ruled record of figure cells: caption, tabular figure, faint note.",
+      "html": "<dl class=\"ds-strip\"><div class=\"ds-cell\"><dt class=\"ds-cap\">Documents</dt><dd class=\"ds-fig\">8</dd><dd class=\"ds-note\">Active in the bucket</dd></div><div class=\"ds-cell\"><dt class=\"ds-cap\">Current storage</dt><dd class=\"ds-fig\">9.33 MiB</dd><dd class=\"ds-note\">Latest version of each document</dd></div></dl>",
+      "css": ".ds-strip { font-family: var(--font-sans); margin: 0; display: grid; grid-template-columns: repeat(2, 1fr); gap: 1px; background: var(--color-rule); border: 1px solid var(--color-rule); border-radius: var(--radius-record); overflow: hidden; } .ds-cell { background: var(--color-panel); padding: 20px 24px; } .ds-cap { font-size: 12px; line-height: 16px; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; color: var(--color-ink-muted); } .ds-fig { margin: 8px 0 0; font-size: 28px; line-height: 1; font-weight: 600; letter-spacing: -.025em; color: var(--color-ink); font-variant-numeric: tabular-nums lining-nums; white-space: nowrap; } .ds-note { margin: 8px 0 0; font-size: 13px; color: var(--color-ink-faint); }"
+    },
+    {
+      "name": "Container List",
+      "kind": "custom",
+      "refersTo": "share-bar-track",
+      "description": "Ruled class rows with square-ended bars on one shared byte scale.",
+      "html": "<section class=\"ds-rec\"><header class=\"ds-rec-h\"><h2>Storage by class</h2><span class=\"ds-cap2\">Simulated S3</span></header><div class=\"ds-row\"><span class=\"ds-cls\"><i style=\"background:var(--color-class-standard)\"></i>STANDARD<small>Frequent access</small></span><span class=\"ds-track\"><span style=\"width:67%;background:var(--color-class-standard)\"></span></span><b>7.80 MiB</b><em>67%</em></div><div class=\"ds-row\"><span class=\"ds-cls\"><i style=\"background:var(--color-class-gir)\"></i>GLACIER_IR<small>Rarely accessed, instant retrieval</small></span><span class=\"ds-track\"><span style=\"width:25%;background:var(--color-class-gir)\"></span></span><b>2.96 MiB</b><em>25%</em></div></section>",
+      "css": ".ds-rec { font-family: var(--font-sans); background: var(--color-panel); border: 1px solid var(--color-rule); border-radius: var(--radius-record); } .ds-rec-h { display: flex; align-items: baseline; justify-content: space-between; padding: 12px 24px; border-bottom: 1px solid var(--color-rule); } .ds-rec-h h2 { margin: 0; font-size: 16px; font-weight: 600; color: var(--color-ink); } .ds-cap2 { font-size: 12px; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; color: var(--color-ink-muted); } .ds-row { display: grid; grid-template-columns: 13rem 1fr 6rem 3.5rem; gap: 24px; align-items: center; padding: 16px 24px; font-size: 14px; font-variant-numeric: tabular-nums lining-nums; } .ds-row + .ds-row { border-top: 1px solid var(--color-rule); } .ds-cls { font-weight: 600; color: var(--color-ink); } .ds-cls i { display: inline-block; width: 10px; height: 10px; margin-right: 8px; } .ds-cls small { display: block; padding-left: 18px; font-size: 13px; font-weight: 400; color: var(--color-ink-faint); } .ds-track { display: block; height: 12px; background: var(--color-ground); } .ds-track span { display: block; height: 100%; } .ds-row b { text-align: right; font-weight: 500; color: var(--color-ink); } .ds-row em { text-align: right; font-style: normal; color: var(--color-ink-muted); }"
+    },
+    {
+      "name": "Status List",
+      "kind": "custom",
+      "refersTo": "status-swatch",
+      "description": "Compact ruled processing counts; red only for failures.",
+      "html": "<ul class=\"ds-status\"><li><span><i style=\"background:var(--color-accent)\"></i>Pending</span><b>2</b></li><li><span><i style=\"background:var(--color-ok)\"></i>Succeeded</span><b>5</b></li><li><span><i style=\"background:var(--color-class-gir)\"></i>Skipped</span><b>1</b></li><li><span><i style=\"background:var(--color-alert)\"></i>Failed</span><b class=\"is-alert\">1</b></li></ul>",
+      "css": ".ds-status { font-family: var(--font-sans); list-style: none; margin: 0; padding: 0; background: var(--color-panel); border: 1px solid var(--color-rule); border-radius: var(--radius-record); font-size: 14px; color: var(--color-ink); } .ds-status li { display: flex; justify-content: space-between; align-items: center; padding: 10px 24px; } .ds-status li + li { border-top: 1px solid var(--color-rule); } .ds-status i { display: inline-block; width: 10px; height: 10px; margin-right: 8px; } .ds-status b { font-weight: 400; font-variant-numeric: tabular-nums lining-nums; } .ds-status b.is-alert { font-weight: 600; color: var(--color-alert); }"
+    },
+    {
+      "name": "Empty State",
+      "kind": "card",
+      "refersTo": "record-panel",
+      "description": "Dashed record: an unfilled container.",
+      "html": "<div class=\"ds-empty\"><span class=\"ds-empty-i\"><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"20\" height=\"20\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.75\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><rect width=\"20\" height=\"5\" x=\"2\" y=\"3\" rx=\"1\"/><path d=\"M4 8v11a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8\"/><path d=\"M10 12h4\"/></svg></span><div><p class=\"ds-empty-t\">Upload your first document</p><p class=\"ds-empty-b\">Your simulated S3 bucket is empty.</p></div></div>",
+      "css": ".ds-empty { font-family: var(--font-sans); display: flex; align-items: center; gap: 20px; padding: 32px; background: var(--color-panel); border: 1px dashed var(--color-rule); border-radius: var(--radius-record); } .ds-empty-i { color: var(--color-accent); } .ds-empty-i svg { width: 32px; height: 32px; stroke-width: 1.5; } .ds-empty-t { margin: 0; font-size: 16px; font-weight: 600; color: var(--color-ink); } .ds-empty-b { margin: 4px 0 0; font-size: 14px; color: var(--color-ink-muted); }"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Finding Aid",
+    "overview": "CloudVault reads like an archive's finding aid for its own holdings: a summary of what is held and a ruled container list of where it sits, not a wall of metric cards. A slate archive shell sits over a cool box-board ground; content lives on white record panels bounded by hairline rules, with square 2px corners. Public Sans is set like institutional record labels: uppercase tracked captions name each field, and every number is a tabular, lining figure.\n\nThe world is light by decision. It is built for a classroom projector, where a pale ground and dark ink survive washed-out projection better than a dark console. Density is moderate: panels breathe, but each row carries a label, a measure and a figure with nothing ornamental between them. Color is mostly slate and grey. Archival green and archival red are reserved for processing outcomes and failures, so they keep their meaning.\n\nThe system rejects the four-rounded-cards-and-a-chart console. Summary figures share one ruled strip, and distributions are drawn in place as square-ended bars inside the list rows rather than handed to a chart library.",
+    "keyCharacteristics": [
+      "Slate shell header over a cool box-board ground; white record panels with 1px hairline rules.",
+      "2px record corners everywhere; no shadows, no gradients.",
+      "Uppercase tracked 12px captions label fields; tabular lining figures everywhere numbers appear.",
+      "Distributions drawn as in-row square-ended bars on one shared scale.",
+      "Green and red mean only success and failure."
+    ],
+    "rules": [
+      {
+        "name": "The Reserved Signal Rule",
+        "body": "Archival green means a job succeeded and archival red means one failed or something needs attention. Neither is used for decoration, branding or emphasis.",
+        "section": "colors"
+      },
+      {
+        "name": "The Swatch-Not-Text Rule",
+        "body": "Pale Stack Grey (2.2:1 on white) is only ever a swatch or bar fill. It is never a text color. Every bar it fills sits next to a written figure.",
+        "section": "colors"
+      },
+      {
+        "name": "The Tabular Figure Rule",
+        "body": "Every number is set in tabular lining figures (tables and any element marked as a figure), so columns of bytes and counts line up.",
+        "section": "typography"
+      },
+      {
+        "name": "The Caption Labels a Field Rule",
+        "body": "A caption names the value directly beneath it or beside it in a header. It is never a free-floating label above a heading.",
+        "section": "typography"
+      },
+      {
+        "name": "The Hairline Not Shadow Rule",
+        "body": "Separate things with a 1px rule or a change of tone, never with a shadow. Surfaces don't lift on hover either.",
+        "section": "elevation"
+      }
+    ],
+    "dos": [
+      "**Do** put content on white record panels with a 1px hairline border and 2px corners.",
+      "**Do** label every figure with a 12px uppercase tracked caption and set the figure in tabular lining numerals.",
+      "**Do** draw distributions as square-ended in-row bars on one shared scale, each next to its written figure.",
+      "**Do** keep notes at 13px in Faint Ink (at least 4.5:1 on panel and ground).",
+      "**Do** make skeletons mirror the loaded layout.",
+      "**Do** keep the world light; it is set for projection."
+    ],
+    "donts": [
+      "**Don't** use shadows or gradients; separate with hairlines and tone.",
+      "**Don't** split summary figures into separate rounded metric cards.",
+      "**Don't** use archival green or red for anything but success and failure.",
+      "**Don't** set text in Pale Stack Grey.",
+      "**Don't** round corners beyond the 2px record corner, or round the ends of bars and swatches.",
+      "**Don't** float a caption above a heading as a kicker or eyebrow."
+    ]
+  }
+}

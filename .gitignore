@@ -218,3 +218,19 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+# Playwright CLI output (may contain credentials)
+.playwright-cli/
+
+# CloudVault
+node_modules/
+frontend/dist/
+frontend/.env*
+!frontend/.env.example
+.env.local
+*.zip
+lambda/build/
+.DS_Store
+*.tsbuildinfo
+*.nosync
+.impeccable/review/
+.impeccable/questions/

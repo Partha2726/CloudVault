@@ -1,0 +1,14 @@
+line-length = 120
+target-version = "py311"
+
+[lint]
+select = ["E", "F", "I", "B", "UP"]
+
+[lint.flake8-bugbear]
+extend-immutable-calls = ["fastapi.Depends", "fastapi.Query", "fastapi.File", "fastapi.Header"]
+
+[lint.isort]
+known-third-party = ["alembic"]
+
+[lint.per-file-ignores]
+"alembic/versions/*.py" = ["E501"]
